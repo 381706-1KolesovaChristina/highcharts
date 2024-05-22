@@ -1,0 +1,46 @@
+.container {
+    grid-area: p;
+
+    background-image: linear-gradient(rgba(19, 181, 234, 0.25) 0%, rgba(19, 181, 234, 0.02) 10%, rgba(19, 181, 234, 0.02) 91%, rgba(19, 181, 234, 0.25) 100%);
+}
+
+.text {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    color: #0079BE;
+
+    display: block;
+    width: 240px;
+    height: 30px;
+    padding: 10px;
+}
+
+.forText {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(19, 181, 234, 0.3);
+}
+
+.year_text {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+
+    width: 260px;
+    height: 20px;
+}
+
+.select {
+    font-size: 18px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: normal;
+
+    width: 260px;
+    height: 30px;
+    padding: 10px;
+
+    background-color: rgba(0, 121, 194, 0.05);
+    border-radius: 3px;
+    border: 1px solid rgba(0, 121, 194, 0.5);
+}
