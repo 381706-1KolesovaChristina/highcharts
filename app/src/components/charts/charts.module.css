@@ -1,8 +1,16 @@
+.section2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background-image: linear-gradient(rgba(19, 181, 234, 0.02) 76%, rgba(19, 181, 234, 0.15) 100%);
+
+}
+
 .charts {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
 ul {
@@ -10,7 +18,6 @@ ul {
     padding: 0;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     gap: 15px;
 
     height: 280px;
@@ -25,4 +32,23 @@ li {
     font-size: 20px;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
+}
+
+.sabLabel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    color: #0079BE;
+    font-weight: bold;
+}
+
+.label {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    color: #0079BE;
+    font-weight: bold;
+    text-align: center;
 }

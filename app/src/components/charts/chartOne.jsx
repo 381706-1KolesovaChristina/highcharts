@@ -4,15 +4,17 @@ import s from './chartOne.module.css'
 
 const options = {
     chart: {
-        type: 'column'
+        type: 'column',
+        //width: 1400,
+        height: 400
     },
     title: {
-        text: 'Затраты на ГРР всего 2018-2026гг., млн руб. (с НДС)',
-        margin: 13,
-        style: {
-            color: '#0079BE',
-            fontWeight: 'bold'
-        }
+        text: undefined//'Затраты на ГРР всего 2018-2026гг., млн руб. (с НДС)',
+        // margin: 13,
+        // style: {
+        //     color: '#0079BE',
+        //     fontWeight: 'bold'
+        // }
     },
     xAxis: {
         categories: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026']
@@ -51,12 +53,16 @@ const options = {
 
 const ChartOne = () => {
     return (
-        <div className={s.chart}>
-            <HighchartsReact
-                highcharts={Highcharts}
-                constructorType={'chart'}
-                options={options}
-            />
+        <div className={s.section1}>
+            <div className={s.label}>Затраты на ГРР всего 2018-2026гг., млн руб. (с НДС)</div>
+
+            <div className={s.chart}>
+                <HighchartsReact
+                    highcharts={Highcharts}
+                    constructorType={'chart'}
+                    options={options}
+                />
+            </div>
         </div>
     );
 }

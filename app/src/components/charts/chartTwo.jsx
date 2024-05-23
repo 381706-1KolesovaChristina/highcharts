@@ -6,7 +6,8 @@ const options = {
     chart: {
         type: 'bar',
         width: 520,
-        height: 280
+        height: 280,
+        backgroundColor: null
     },
     title: {
         text: undefined
@@ -40,9 +41,6 @@ const options = {
         title: {
             text: null
         },
-        labels: {
-            format: '{value}%'
-        },
         accessibility: {
             description: 'Percentage population',
             rangeDescription: 'Range: 0 to 5%'
@@ -51,7 +49,11 @@ const options = {
     plotOptions: {
         series: {
             dataLabels: {
-                enabled: true
+                enabled: true,
+                color: '#FFFFFF',
+                style: {
+                    textOutline: "0px"//белая обводка лейблов
+                }
             },
             maxPointWidth: 55
         },
