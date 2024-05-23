@@ -23,7 +23,11 @@ const options = {
     plotOptions: {
         series: {
             dataLabels: {
-                enabled: true
+                enabled: true,
+                color: '#BDBDBD',
+                style: {
+                    textOutline: "0px"//белая обводка лейблов
+                }
             },
             maxPointWidth: 55
         },

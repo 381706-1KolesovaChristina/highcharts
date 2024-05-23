@@ -10,8 +10,8 @@ const options = {
     },
     title: {
         text: undefined
-        //     align: 'left',
-        //     text: 'План',
+        //     align: 'false'
+        //     text: 'Факт',
         //     margin: 21,
         //     style: {
         //         color: '#0079BE',
@@ -23,31 +23,33 @@ const options = {
     },
     xAxis: {
         visible: false,
-        reversed: true,
-
+        reversed: false,
+        labels: {
+            step: 1
+        },
         accessibility: {
             description: 'Age (male)'
-        },
-        title: {
-            text: null
-        },
+        }
     },
-    yAxis: {
-        visible: false, //скрыть ось
+
+    yAxis: [{
+        visible: false,
         title: {
             text: null
         },
+        reversed: true
+    }, {
         title: {
             text: null
-        },
-        labels: {
-            format: '{value}%'
         },
         accessibility: {
             description: 'Percentage population',
             rangeDescription: 'Range: 0 to 5%'
-        }
-    },
+        },
+        offset: 0,
+        left: '50%',
+        width: '50%'
+    }],
     plotOptions: {
         series: {
             dataLabels: {
@@ -58,16 +60,16 @@ const options = {
     },
     series: [
         {
-            name: 'План',
-            data: [33210, 38567, 46300, 51453, 56145, 62986],
-            color: '#BDBDBD',
+            name: 'Факт',
+            data: [62986, 56145, 51453, 46300, 38567, 33210],
+            color: '#13B5EA',
             centerInCategory: true
         }
     ],
 
 }
 
-const ChartTwo = () => {
+const ChartThree = () => {
     return (
         <div>
             <HighchartsReact
@@ -78,4 +80,4 @@ const ChartTwo = () => {
     );
 }
 
-export default ChartTwo;
+export default ChartThree;

@@ -22,8 +22,8 @@ const Parametr = () => {
                         <option>2026</option>
                     </select>
                 </label>
-                <div className={s.button}>
-                    <button>Сбросить фильтры</button>
+                <div className={s.btn}>
+                    <button className={s.button}>Сбросить фильтры</button>
                 </div>
             </div>
         </div>

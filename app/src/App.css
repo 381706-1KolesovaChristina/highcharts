@@ -12,3 +12,7 @@
 .charts {
   grid-area: c;
 }
+
+.chart2 {
+  width: 520px;
+}
