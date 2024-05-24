@@ -1,6 +1,6 @@
-import Highcharts from 'highcharts'
+import Highcharts, { format } from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
-//import s from './chartTwo.module.css'
+import s from './chartTree.module.css'
 
 const options = {
     chart: {
@@ -25,11 +25,8 @@ const options = {
     xAxis: {
         visible: false,
         reversed: false,
-        labels: {
-            step: 1
-        },
-        accessibility: {
-            description: 'Age (male)'
+        title: {
+            text: null
         }
     },
 
@@ -39,24 +36,24 @@ const options = {
             text: null
         },
         reversed: true
-    }, {
-        title: {
-            text: null
-        },
-        offset: 0,
-        left: '50%',
-        width: '50%'
-    }],
+    }
+        // offset: 0,
+        // left: '50%',
+        // width: '50%'
+    ],
     plotOptions: {
         series: {
             dataLabels: {
                 enabled: true,
                 color: '#FFFFFF',
                 style: {
-                    textOutline: "0px"//белая обводка лейблов
-                }
+                    textOutline: "0px",//белая обводка лейблов
+                    fontSize: '20px'
+                },
+                inside: true,
+                format: '{y} <p>(61%)</p>'
             },
-            maxPointWidth: 55
+            pointWidth: 30
         },
     },
     series: [
@@ -73,6 +70,9 @@ const options = {
 const ChartThree = () => {
     return (
         <div>
+            <div className={s.sabLabel}>
+                <div>Факт</div>
+            </div>
             <HighchartsReact
                 highcharts={Highcharts}
                 options={options}

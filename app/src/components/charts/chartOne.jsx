@@ -55,7 +55,6 @@ const ChartOne = () => {
     return (
         <div className={s.section1}>
             <div className={s.label}>Затраты на ГРР всего 2018-2026гг., млн руб. (с НДС)</div>
-
             <div className={s.chart}>
                 <HighchartsReact
                     highcharts={Highcharts}

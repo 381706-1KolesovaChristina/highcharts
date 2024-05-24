@@ -1,9 +1,9 @@
 import './App.css';
 import ChartOne from './components/charts/chartOne';
-import ChartTwo from './components/charts/chartTwo';
+//import ChartTwo from './components/charts/chartTwo';
 import Parametr from './components/parametrs/parametrs';
 import Buttons from './components/buttons/buttons';
-import ChartThree from './components/charts/chartThree';
+//import ChartThree from './components/charts/chartThree';
 import Charts from './components/charts/charts';
 
 function App() {
@@ -13,8 +13,6 @@ function App() {
       <Buttons />
       <div className='charts'>
         <ChartOne />
-        {/* <ChartTwo />
-        <ChartThree /> */}
         <Charts />
       </div>
     </div>

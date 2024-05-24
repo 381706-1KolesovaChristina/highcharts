@@ -6,14 +6,9 @@ import s from './charts.module.css'
 
 
 const Charts = () => {
-    //лейблы к графикам
     return (
         <div className={s.section2}>
             <div className={s.label}>Затраты на ГРР по ЛУ на 2023 год</div>
-            <div className={s.sabLabel}>
-                <div>План</div>
-                <div>Факт</div>
-            </div>
             <div div className={s.charts} >
                 <div className={s.chart1}>
                     <ChartTwo />
