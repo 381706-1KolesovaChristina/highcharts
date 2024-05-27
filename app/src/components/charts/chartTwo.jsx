@@ -1,12 +1,12 @@
-import Highcharts from 'highcharts'
+import Highcharts, { color } from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import s from './chartTwo.module.css'
 
 const options = {
     chart: {
         type: 'bar',
-        width: 520,
-        height: 280,
+        width: 1400,
+        // maxHeight: 280,
         backgroundColor: null
     },
     title: {
@@ -22,13 +22,56 @@ const options = {
     legend: {
         enabled: false
     },
-    xAxis: {
-        visible: false,
+    xAxis: [{
+        //visible: false,
+        type: 'category',
         reversed: true,
-        title: {
-            text: null
-        }
+        opposite: true,//!
+        // title: { //!
+        //     text: null
+        // },
+        // // centerInCategory: true,//
+        // // alignTicks: false,//
+        lineColor: 'transparent',//скрыть саму ось
+        tickLength: 0,//скрыть саму ось
+        // maxHeight: 280, //!
+        categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N'],
     },
+    {
+        //visible: false,
+        type: 'category',
+        reversed: false,
+        //opposite: true,//!
+        linkedTo: 0,
+        // title: { //!
+        //     text: null
+        // },
+        // // centerInCategory: true,//
+        // // alignTicks: false,//
+        // lineColor: 'transparent',//скрыть саму ось
+        // tickLength: 0,//скрыть саму ось
+        maxHeight: 280, //!
+        categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N'],
+
+    },
+    {
+        //visible: false,
+        type: 'category',
+        reversed: false,
+        //opposite: true,//!
+        linkedTo: 0,
+        // title: { //!
+        //     text: null
+        // },
+        // // centerInCategory: true,//
+        // // alignTicks: false,//
+        // lineColor: 'transparent',//скрыть саму ось
+        // tickLength: 0,//скрыть саму ось
+        maxHeight: 280, //!
+        categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N'],
+
+    }
+    ],
     // offset: 0,
     // left: '50%',
     // width: '50%'
@@ -44,36 +87,49 @@ const options = {
                     fontSize: '20px'
                 }
             },
-            pointWidth: 30
+            pointWidth: 30,
+            pointPadding: 0,//!
+            connectorAllowed: true
         }
+
     },
 
-    yAxis: {
+    yAxis: [{
         visible: false, //скрыть ось
         title: {
             text: null
         },
+        //min: 33000,
+        width: 520
+    }, {
+        visible: false,
         title: {
             text: null
         },
-        // plotOptions: {
-        //     series: {
-        //         dataLabels: {
-        //             enabled: true,
-        //             color: '#FFFFFF',
-        //             style: {
-        //                 textOutline: "0px"//белая обводка лейблов
-        //             }
-        //         },
-        //         pointWidth: 30
-        //     },
+        reversed: true,
+        // min: 33000
+        width: 520
     },
+
+    ],
     series: [
         {
             name: 'План',
             data: [33210, 38567, 46300, 51453, 56145, 62986],
             color: '#BDBDBD',
-            centerInCategory: true
+            //centerInCategory: true,
+            yAxis: 0,
+            xAxis: 0,
+            categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N']
+        },
+        {
+            name: 'Факт',
+            data: [33210, 38567, 46300, 51453, 56145, 62986],
+            color: '#13B5EA',
+            //centerInCategory: true,
+            yAxis: 1,
+            xAxis: 2,
+            categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N']
         }
     ],
 
@@ -83,9 +139,9 @@ const options = {
 const ChartTwo = () => {
     return (
         <div>
-            <div className={s.sabLabel}>
+            {/* <div className={s.sabLabel}>
                 <div>План</div>
-            </div>
+            </div> */}
             <HighchartsReact
                 highcharts={Highcharts}
                 options={options}
