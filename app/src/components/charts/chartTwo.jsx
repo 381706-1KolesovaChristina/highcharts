@@ -5,77 +5,59 @@ import s from './chartTwo.module.css'
 const options = {
     chart: {
         type: 'bar',
-        width: 1400,
-        // maxHeight: 280,
+        height: 280,
         backgroundColor: null
     },
     title: {
-        text: undefined
-        //     align: 'left',
-        //     text: 'План',
-        //     margin: 21,
-        //     style: {
-        //         color: '#0079BE',
-        //         fontWeight: 'bold'
-        //     }
+        text: 'ПАО “Газпром”<br><br>ООО “ГП Недра”<br><br>ООО “ГП НИИГАЗ”<br><br>ООО “ГД Краснодар”<br><br>Компания N<br><br>Компания N',
+        align: 'center',//*выравнивание по горизонтали 
+        floating: true,
+        y: 5,
+        verticalAlign: 'top',//'middle',//*выравнивание по вертикали
+        style: {
+            fontSize: '20px',
+            color: '#0079BE',
+            fontWeight: 'bold'
+        }
+        //todo: проценты
     },
     legend: {
         enabled: false
     },
     xAxis: [{
-        //visible: false,
+        visible: false,
         type: 'category',
         reversed: true,
         opposite: true,//!
-        // title: { //!
-        //     text: null
-        // },
-        // // centerInCategory: true,//
-        // // alignTicks: false,//
+        // centerInCategory: true,//
+        // alignTicks: false,//
         lineColor: 'transparent',//скрыть саму ось
         tickLength: 0,//скрыть саму ось
-        // maxHeight: 280, //!
         categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N'],
     },
     {
-        //visible: false,
+        visible: false,
         type: 'category',
         reversed: false,
         //opposite: true,//!
         linkedTo: 0,
-        // title: { //!
-        //     text: null
-        // },
-        // // centerInCategory: true,//
-        // // alignTicks: false,//
-        // lineColor: 'transparent',//скрыть саму ось
-        // tickLength: 0,//скрыть саму ось
-        maxHeight: 280, //!
+        // centerInCategory: true,//
+        // alignTicks: false,//
         categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N'],
 
     },
     {
-        //visible: false,
+        visible: false,
         type: 'category',
         reversed: false,
         //opposite: true,//!
         linkedTo: 0,
-        // title: { //!
-        //     text: null
-        // },
-        // // centerInCategory: true,//
-        // // alignTicks: false,//
-        // lineColor: 'transparent',//скрыть саму ось
-        // tickLength: 0,//скрыть саму ось
-        maxHeight: 280, //!
+        // centerInCategory: true,//
+        // alignTicks: false,//
         categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N'],
 
     }
     ],
-    // offset: 0,
-    // left: '50%',
-    // width: '50%'
-
     plotOptions: {
         series: {
             dataLabels: {
@@ -99,16 +81,14 @@ const options = {
         title: {
             text: null
         },
-        //min: 33000,
-        width: 520
+        max: 200000
     }, {
         visible: false,
         title: {
             text: null
         },
         reversed: true,
-        // min: 33000
-        width: 520
+        max: 200000
     },
 
     ],
@@ -139,13 +119,17 @@ const options = {
 const ChartTwo = () => {
     return (
         <div>
-            {/* <div className={s.sabLabel}>
-                <div>План</div>
-            </div> */}
-            <HighchartsReact
-                highcharts={Highcharts}
-                options={options}
-            />
+            <div className={s.section2}>
+                <div className={s.label}>Затраты на ГРР по ЛУ на 2023 год</div>
+                <div className={s.sabLabel}>
+                    <div>План</div>
+                    <div>Факт</div>
+                </div>
+                <HighchartsReact
+                    highcharts={Highcharts}
+                    options={options}
+                />
+            </div>
         </div>
     );
 }

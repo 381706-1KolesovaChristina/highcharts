@@ -10,14 +10,16 @@ const options = {
     },
     title: {
         text: undefined//'Затраты на ГРР всего 2018-2026гг., млн руб. (с НДС)',
-        // margin: 13,
-        // style: {
-        //     color: '#0079BE',
-        //     fontWeight: 'bold'
-        // }
     },
     xAxis: {
-        categories: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026']
+        lineColor: 'rgba(0, 121, 190, 1)',
+        categories: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
+        labels: {
+            style: {
+                color: 'rgba(0, 121, 190, 1)',
+                fontSize: '16px'
+            }
+        }
     },
     yAxis: {
         visible: false //скрыть ось
@@ -26,26 +28,51 @@ const options = {
         series: {
             dataLabels: {
                 enabled: true,
-                color: '#BDBDBD',
+                inside: false,
                 style: {
+                    // color: '#BDBDBD',
                     textOutline: "0px"//белая обводка лейблов
                 }
-            },
-            maxPointWidth: 55
-        },
+            }
+            // maxPointWidth: 55
+        }//, {
+        //     dataLabels: {
+        //         enabled: true,
+        //         // color: '#BDBDBD',
+        //         style: {
+        //             textOutline: "0px"//белая обводка лейблов
+        //         }
+        //     },
+        //     // maxPointWidth: 55
+        // },]
     },
     series: [
         {
             name: 'План',
             data: [78100, 78100, 78100, 78100, 78100, 78100, 78100, 78100, 78100],
             color: '#BDBDBD',
-            centerInCategory: true
+            centerInCategory: true,
+            // dataLabels: {
+            //     style: {
+            //         enabled: true,
+            //         color: '#BDBDBD',
+
+            //         textOutline: "0px"//белая обводка лейблов
+            //     }
+            // },
         },
         {
             name: 'Факт',
             data: [76900, 78100, 76900, 76900, 76900, 76900],
             color: '#13B5EA',
-            centerInCategory: true
+            centerInCategory: true,
+            // dataLabels: {
+            //     enabled: true,
+            //     color: '#13B5EA',
+            //     style: {
+            //         textOutline: "0px"//белая обводка лейблов
+            //     }
+            // },
         }
     ],
 
