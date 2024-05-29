@@ -17,7 +17,8 @@ const options = {
         labels: {
             style: {
                 color: 'rgba(0, 121, 190, 1)',
-                fontSize: '16px'
+                fontSize: '16px',
+                fontWeight: 'semyBold'
             }
         }
     },
@@ -30,49 +31,44 @@ const options = {
                 enabled: true,
                 inside: false,
                 style: {
-                    // color: '#BDBDBD',
+                    fontSize: '16px',
                     textOutline: "0px"//белая обводка лейблов
                 }
-            }
+            },
+            // pointWidth: 55,
+            // categoryPercentage: 1.0,
+            // barPercentage: 0.5,
+            groupPadding: 0.1, //*расстояние между категориями столбцов 
+            pointPadding: 0.05 //*расстояние между столбцами внутри категории
+
+            // categoryPercentage: 1
             // maxPointWidth: 55
-        }//, {
-        //     dataLabels: {
-        //         enabled: true,
-        //         // color: '#BDBDBD',
-        //         style: {
-        //             textOutline: "0px"//белая обводка лейблов
-        //         }
-        //     },
-        //     // maxPointWidth: 55
-        // },]
+        }
     },
     series: [
         {
             name: 'План',
             data: [78100, 78100, 78100, 78100, 78100, 78100, 78100, 78100, 78100],
             color: '#BDBDBD',
-            centerInCategory: true,
-            // dataLabels: {
-            //     style: {
-            //         enabled: true,
-            //         color: '#BDBDBD',
-
-            //         textOutline: "0px"//белая обводка лейблов
-            //     }
-            // },
+            // centerInCategory: true,
+            dataLabels: {
+                style: {
+                    color: '#BDBDBD',
+                },
+                // categoryPercentage: 1,
+            },
         },
         {
             name: 'Факт',
             data: [76900, 78100, 76900, 76900, 76900, 76900],
             color: '#13B5EA',
-            centerInCategory: true,
-            // dataLabels: {
-            //     enabled: true,
-            //     color: '#13B5EA',
-            //     style: {
-            //         textOutline: "0px"//белая обводка лейблов
-            //     }
-            // },
+            // centerInCategory: true,
+            dataLabels: {
+                style: {
+                    color: '#13B5EA',
+                },
+                // categoryPercentage: 1,
+            },
         }
     ],
 
