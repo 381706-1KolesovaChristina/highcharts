@@ -19,7 +19,6 @@ const options = {
             color: '#0079BE',
             fontWeight: 'bold'
         }
-        //todo: проценты
     },
     legend: {
         enabled: false
@@ -73,7 +72,6 @@ const options = {
             pointPadding: 0,//!
             connectorAllowed: true
         }
-
     },
 
     yAxis: [{
@@ -81,14 +79,14 @@ const options = {
         title: {
             text: null
         },
-        max: 200000
+        max: 180000
     }, {
         visible: false,
         title: {
             text: null
         },
         reversed: true,
-        max: 200000
+        max: 180000
     },
 
     ],
@@ -97,7 +95,6 @@ const options = {
             name: 'План',
             data: [33210, 38567, 46300, 51453, 56145, 62986],
             color: '#BDBDBD',
-            //centerInCategory: true,
             yAxis: 0,
             xAxis: 0,
             categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N']
@@ -106,10 +103,12 @@ const options = {
             name: 'Факт',
             data: [33210, 38567, 46300, 51453, 56145, 62986],
             color: '#13B5EA',
-            //centerInCategory: true,
             yAxis: 1,
             xAxis: 2,
-            categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N']
+            categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N'],
+            dataLabels: {
+                format: '{point.y} (60%)'
+            },
         }
     ],
 
