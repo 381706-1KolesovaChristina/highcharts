@@ -18,7 +18,7 @@ const options = {
             style: {
                 color: 'rgba(0, 121, 190, 1)',
                 fontSize: '16px',
-                fontWeight: 'semyBold'
+                fontWeight: 'bold'
             }
         }
     },
@@ -35,14 +35,8 @@ const options = {
                     textOutline: "0px"//белая обводка лейблов
                 }
             },
-            // pointWidth: 55,
-            // categoryPercentage: 1.0,
-            // barPercentage: 0.5,
             groupPadding: 0.1, //*расстояние между категориями столбцов 
             pointPadding: 0.05 //*расстояние между столбцами внутри категории
-
-            // categoryPercentage: 1
-            // maxPointWidth: 55
         }
     },
     series: [
@@ -50,24 +44,22 @@ const options = {
             name: 'План',
             data: [78100, 78100, 78100, 78100, 78100, 78100, 78100, 78100, 78100],
             color: '#BDBDBD',
-            // centerInCategory: true,
+            centerInCategory: true, //*центрирование по категориям игнорируя пустые точки. false- резерв места для пустых точек
             dataLabels: {
                 style: {
                     color: '#BDBDBD',
                 },
-                // categoryPercentage: 1,
             },
         },
         {
             name: 'Факт',
             data: [76900, 78100, 76900, 76900, 76900, 76900],
             color: '#13B5EA',
-            // centerInCategory: true,
+            centerInCategory: true,
             dataLabels: {
                 style: {
                     color: '#13B5EA',
                 },
-                // categoryPercentage: 1,
             },
         }
     ],

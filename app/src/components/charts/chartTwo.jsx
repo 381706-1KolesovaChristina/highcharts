@@ -4,7 +4,6 @@ import s from './chartTwo.module.css'
 
 let data1 = [33210, 38567, 46300, 51453, 56145, 62986];
 let data2 = [33210, 38567, 46300, 51453, 56145, 62986];
-let data3 = [100 * data2[0] / data1[0], 100 * data2[1] / data1[1]];
 
 const options = {
     chart: {
@@ -15,7 +14,7 @@ const options = {
     title: {
         text: 'ПАО “Газпром”<br><br>ООО “ГП Недра”<br><br>ООО “ГП НИИГАЗ”<br><br>ООО “ГД Краснодар”<br><br>Компания N<br><br>Компания N',
         align: 'center',//*выравнивание по горизонтали 
-        floating: true,
+        floating: true,//*плавающий заголовок - область графика не освобождает место под него 
         y: 5,
         verticalAlign: 'top',//'middle',//*выравнивание по вертикали
         style: {
@@ -28,44 +27,24 @@ const options = {
         enabled: false
     },
     xAxis: [{
-        visible: false,
+        visible: false,//*отображение
         type: 'category',
-        reversed: true,
-        opposite: true,//!
-        // centerInCategory: true,//
-        // alignTicks: false,//
-        lineColor: 'transparent',//скрыть саму ось
-        tickLength: 0,//скрыть саму ось
+        reversed: true,//*поворот оси наибольшим числом к нач.коорд.
         categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N'],
     },
     {
         visible: false,
         type: 'category',
         reversed: false,
-        //opposite: true,//!
         linkedTo: 0,
-        // centerInCategory: true,//
-        // alignTicks: false,//
         categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N'],
-
-    },
-    {
-        visible: false,
-        type: 'category',
-        reversed: false,
-        //opposite: true,//!
-        linkedTo: 0,
-        // centerInCategory: true,//
-        // alignTicks: false,//
-        categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N'],
-
     }
     ],
     plotOptions: {
         series: {
             dataLabels: {
                 enabled: true,
-                inside: true,
+                inside: true,//*вырпвнивание внутри столбца
                 color: '#FFFFFF',
                 style: {
                     textOutline: 0,
@@ -73,8 +52,6 @@ const options = {
                 }
             },
             pointWidth: 30,
-            pointPadding: 0,//!
-            connectorAllowed: true
         }
     },
 
@@ -108,10 +85,14 @@ const options = {
             data: data2,
             color: '#13B5EA',
             yAxis: 1,
-            xAxis: 2,
+            xAxis: 1,
             categories: ['ПАО “Газпром”', 'ООО “ГП Недра”', 'ООО “ГП НИИГАЗ”', 'ООО “ГД Краснодар”', 'Компания N', 'Компания N'],
             dataLabels: {
-                format: '{point.y} (%)'
+                //format: '{point.y} {data3.value}(%)'
+                formatter: function () {
+                    let series1 = this.series.chart.series[0].yData[this.point.index];
+                    return `${this.y} (${((this.y / series1) * 100)}%)`;
+                }
             },
         }
     ],

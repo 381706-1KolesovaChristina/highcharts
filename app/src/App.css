@@ -17,15 +17,10 @@
 
   display: flex;
   flex-direction: column;
-  grid-gap: 40px;
+  gap: 40px;
 
   border-radius: 10px;
   border: 1px solid rgba(19, 181, 234, 0.3);
 
   padding: 0 90px;
 }
-
-/* 
-.chart2 {
-  width: 520px;
-} */
