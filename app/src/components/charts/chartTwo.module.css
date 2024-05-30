@@ -8,5 +8,20 @@
     color: #0079BE;
     font-weight: bold;
 
-    padding-left: 15px;
+    padding: 0 10px;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    color: #0079BE;
+    font-weight: bold;
+    text-align: center;
+
+    padding-bottom: 20px;
 }
