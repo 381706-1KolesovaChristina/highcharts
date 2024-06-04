@@ -8,6 +8,9 @@ const options = {
         //width: 1400,
         height: 400
     },
+    credits: {
+        enabled: false,
+    },
     title: {
         text: undefined//'Затраты на ГРР всего 2018-2026гг., млн руб. (с НДС)',
     },

@@ -11,6 +11,9 @@ const options = {
         height: 280,
         backgroundColor: null
     },
+    credits: {
+        enabled: false,
+    },
     title: {
         text: 'ПАО “Газпром”<br><br>ООО “ГП Недра”<br><br>ООО “ГП НИИГАЗ”<br><br>ООО “ГД Краснодар”<br><br>Компания N<br><br>Компания N',
         align: 'center',//*выравнивание по горизонтали 
