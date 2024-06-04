@@ -1,9 +1,10 @@
+import { NavLink } from 'react-router-dom';
 import s from './button.module.css'
 
 const Button = (props) => {
     return (
-        <div className={s.button}>
-            <a className={s.buttonText} >{props.text}</a>
+        <div /*className={s.buttonText}*/>
+            <NavLink className={s.buttonText} to={props.link} >{props.text}</NavLink>
         </div >
     );
 }

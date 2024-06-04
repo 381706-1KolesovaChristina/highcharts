@@ -13,20 +13,20 @@ const Buttons = () => {
                 </div>
             </div>
 
-            <div className={s.button}>
+            {/* <div className={s.button}>
                 <a className={`${s.buttonText} ${s.active}`} href='#'>Затраты на ГРР</a>
-            </div>
-
-            <Button text='CPP 2D' />
-            <Button text='CPP 3D' />
-            <Button text='ПРБ' />
-            <Button text='Скважины' />
-            <Button text='Приросты' />
-            <Button text='Добыча' />
-            <Button text='Запасы' />
-            <Button text='Показатели СЦП' />
-            <Button text='Удельные показатели' />
-            <Button text='Карта' />
+            </div> */}
+            <Button text='Затраты на ГРР' link='/chart1' />
+            <Button text='CPP 2D' link='/chart2' />
+            <Button text='CPP 3D' link='/chart3' />
+            <Button text='ПРБ' link='/chart4' />
+            <Button text='Скважины' link='/chart5' />
+            <Button text='Приросты' link='/chart6' />
+            <Button text='Добыча' link='/chart7' />
+            <Button text='Запасы' link='/chart8' />
+            <Button text='Показатели СЦП' link='/chart9' />
+            <Button text='Удельные показатели' link='/chart10' />
+            <Button text='Карта' link='/chart11' />
 
         </div>
     );

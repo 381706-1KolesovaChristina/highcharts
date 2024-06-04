@@ -1,9 +1,11 @@
 .buttonText {
+    display: block;
+
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-weight: normal;
     text-align: center;
-    vertical-align: center;
+    /* vertical-align: center; */
     color: #0079BE;
     text-decoration: none;
 
@@ -21,7 +23,8 @@
     align-items: center;
 }
 
-.buttonText.active {
+a:active,
+a:focus {
     color: #FFFFFF;
     background-color: #13B5EA;
 }
