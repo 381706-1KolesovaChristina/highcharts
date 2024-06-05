@@ -1,6 +1,6 @@
 import Highcharts, { chart, color } from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
-import s from './chartOne.module.css'
+import s from './chartColumn.module.css'
 
 const options = {
     chart: {
@@ -69,7 +69,7 @@ const options = {
 
 }
 
-const ChartOne = () => {
+const ChartColumn = (props) => {
     return (
         <div className={s.section1}>
             <div className={s.label}>Затраты на ГРР всего 2018-2026гг., млн руб. (с НДС)</div>
@@ -84,4 +84,4 @@ const ChartOne = () => {
     );
 }
 
-export default ChartOne;
+export default ChartColumn;

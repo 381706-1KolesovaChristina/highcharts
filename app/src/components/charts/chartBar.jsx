@@ -1,6 +1,6 @@
 import Highcharts, { color } from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
-import s from './chartTwo.module.css'
+import s from './chartBar.module.css'
 
 let data1 = [33210, 38567, 46300, 51453, 56145, 62986];
 let data2 = [33210, 38567, 46300, 51453, 56145, 62986];
@@ -104,7 +104,7 @@ const options = {
 
 
 
-const ChartTwo = () => {
+const ChartBar = () => {
     return (
         <div>
             <div className={s.section2}>
@@ -122,4 +122,4 @@ const ChartTwo = () => {
     );
 }
 
-export default ChartTwo;
+export default ChartBar;
