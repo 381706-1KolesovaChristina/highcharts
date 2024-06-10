@@ -8,3 +8,5 @@ const chartColumnOne = {
     color: ['#BDBDBD', '#13B5EA'],
     label: 'Затраты на ГРР всего 2018-2026гг., млн руб. (с НДС)',
 };
+
+export default chartColumnOne;

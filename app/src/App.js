@@ -6,14 +6,15 @@ import React from 'react';
 import PageGRR from './components/pages/pageGRR/pageGRR';
 import PageCPP2D from './components/pages/pageCPP2D/pageCPP2D';
 
-const App = () => {
+
+const App = (props) => {
   return (
     <BrowserRouter>
       <div className="app-grid">
         <Parametr />
         <Buttons />
         <Routes>
-          <Route path='/chart1' element={<PageGRR />} />
+          <Route path='/chart1' element={<PageGRR data={props.data} />} />
           <Route path='/chart2' element={<PageCPP2D />} />
         </Routes>
         {/* <Charts1 /> */}

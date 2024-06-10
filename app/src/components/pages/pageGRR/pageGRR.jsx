@@ -1,13 +1,13 @@
 import ChartBar from '../../charts/chartBar';
 import ChartColumn from '../../charts/chartColumn';
 import s from './pageGRR.module.css'
-import data from '../../../data'
 
 
-const PageGRR = () => {
+
+const PageGRR = (props) => {
     return (
         <div className={s.charts}>
-            <ChartColumn />
+            <ChartColumn data={props.data} />
             <ChartBar />
         </div>
     )
