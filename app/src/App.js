@@ -14,8 +14,8 @@ const App = (props) => {
         <Parametr />
         <Buttons />
         <Routes>
-          <Route path='/chart1' element={<PageGRR data={props.data} />} />
-          <Route path='/chart2' element={<PageCPP2D />} />
+          <Route path='/chart1' element={<PageGRR data={props.data.pageGRR} />} />
+          <Route path='/chart2' element={<PageCPP2D data={props.data.PageCPP2D} />} />
         </Routes>
         {/* <Charts1 /> */}
       </div>
