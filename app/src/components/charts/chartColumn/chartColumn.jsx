@@ -7,6 +7,7 @@ const ChartColumn = (props) => {
         chart: {
             type: 'column',
             //width: 1400,
+            // 
             height: 400
         },
         credits: {

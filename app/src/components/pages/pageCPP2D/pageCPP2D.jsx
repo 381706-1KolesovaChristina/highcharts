@@ -1,12 +1,12 @@
-import ChartBar from '../../charts/chartBar';
-import ChartColumn from '../../charts/chartColumn';
+import ChartColumn from '../../charts/chartColumn/chartColumn';
 import s from './pageCPP2D.module.css'
 
 
-const PageCPP2D = () => {
+const PageCPP2D = (props) => {
     return (
         <div className={s.charts}>
-            <ChartBar />
+            <ChartColumn data={props.data.chartColumnOne} />
+            <ChartColumn data={props.data.chartColumnTwo} />
         </div>
     )
 }

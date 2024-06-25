@@ -3,7 +3,7 @@ import s from './button.module.css'
 
 const Button = (props) => {
     return (
-        <div /*className={s.buttonText}*/>
+        <div /*className={s.buttonText}*/ >
             <NavLink
                 // className={s.buttonText}
                 to={props.link}

@@ -9,4 +9,14 @@
     border: 1px solid rgba(19, 181, 234, 0.3);
 
     padding: 0 90px;
+
+    height: 100vh;
+}
+
+.chartOne {
+    height: 50%;
+}
+
+.chartTwo {
+    height: 50%;
 }

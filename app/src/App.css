@@ -2,6 +2,7 @@
   display: grid;
   grid-template-areas:
     "p b"
+    "p c"
     "p c";
   grid-template-columns: 1fr 5fr;
   grid-gap: 20px;
