@@ -17,7 +17,6 @@ const App = (props) => {
           <Route path='/chart1' element={<PageGRR data={props.data.pageGRR} />} />
           <Route path='/chart2' element={<PageCPP2D data={props.data.pageCPP2D} />} />
         </Routes>
-        {/* <Charts1 /> */}
       </div>
     </BrowserRouter>
   );

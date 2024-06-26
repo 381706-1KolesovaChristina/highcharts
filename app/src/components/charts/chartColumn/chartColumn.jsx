@@ -1,4 +1,4 @@
-import Highcharts, { chart, color } from 'highcharts'
+import Highcharts from 'highcharts' //, { chart, color }
 import HighchartsReact from 'highcharts-react-official'
 import s from './chartColumn.module.css'
 
@@ -8,7 +8,7 @@ const ChartColumn = (props) => {
             type: 'column',
             //width: 1400,
             // 
-            height: 400
+            // height: 400
         },
         credits: {
             enabled: false,

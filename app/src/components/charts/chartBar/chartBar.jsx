@@ -1,4 +1,4 @@
-import Highcharts, { color } from 'highcharts'
+import Highcharts from 'highcharts' //, { color }
 import HighchartsReact from 'highcharts-react-official'
 import s from './chartBar.module.css'
 
