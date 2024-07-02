@@ -42,6 +42,13 @@ let state = {
             color: ['#BDBDBD', '#13B5EA'],
             label: 'Затраты на ГРР всего 2018-2026гг., млн руб. (с НДС)',
         },
+        chartPieOne: {
+            categories: ['ПАО "Газпром"', 'ДО'],
+            name: ['ПАО "Газпром"', 'ДО'],
+            data: [65, 35],
+            color: ['#BDBDBD', '#13B5EA'],
+
+        }
     },
 
 }

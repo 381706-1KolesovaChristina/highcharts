@@ -1,0 +1,18 @@
+.chart {
+    background-color: #fff;
+}
+
+.label {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    color: #0079BE;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    /* gap: ; */
+}

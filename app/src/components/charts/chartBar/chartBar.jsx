@@ -101,7 +101,7 @@ const ChartBar = (props) => {
     }
     return (
         <div>
-            <div className={s.section2}>
+            <div className={s.section}>
                 <div className={s.label}>{props.data.label}</div>
                 <div className={s.sabLabel}>
                     <div>{props.data.name[0]}</div>
