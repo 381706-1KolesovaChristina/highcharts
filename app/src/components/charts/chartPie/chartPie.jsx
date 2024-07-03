@@ -17,38 +17,28 @@ const ChartPie = (props) => {
         title: {
             text: undefined,
         },
-        // xAxis: {
-        //     lineColor: 'rgba(0, 121, 190, 1)',
-        //     categories: props.data.categories,//['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
-        //     labels: {
-        //         style: {
-        //             color: 'rgba(0, 121, 190, 1)',
-        //             fontSize: '16px',
-        //             fontWeight: 'bold'
-        //         }
-        //     }
-        // },
-        // yAxis: {
-        //     visible: false //скрыть ось
-        // },
         plotOptions: {
             series: {
                 minPointSize: 10,
-                innerSize: '20%',
+                innerSize: '50%',
                 zMin: 0,
-                borderRadius: 5,
-                borderWidth: 0,
+                // borderRadius: 5, //* радиус углов секторов
+                borderWidth: 0, //* толщина обводки секторов
+                //borderColor: '#000000' //* цвет обвоки секторов
                 // colorByPoint: true,
-                dataLabels: {
-                    enabled: true,
-                    inside: false,
-                    distance: '-10%',
+
+                dataLabels: [{
+                    // inside: false,
+
+                    distance: '-30%',
                     style: {
                         fontSize: '16px',
                         textOutline: "0px"//белая обводка лейблов
                     },
                     connectorWidth: 0
-                },
+                }, {
+                    format: '{point.name}',
+                }]
                 // groupPadding: 0.1, //*расстояние между категориями столбцов 
                 // pointPadding: 0.05 //*расстояние между столбцами внутри категории
             }
@@ -59,6 +49,15 @@ const ChartPie = (props) => {
                 name: props.data.name,//'План',
                 data: props.data.data,//[78100, 78100, 78100, 78100, 78100, 78100, 78100, 78100, 78100],
                 colors: props.data.color,//'#BDBDBD',
+
+                dataLabels: {
+                    // enabled: false,
+                    format: '{point.y:.1f}%',
+                    // style: {
+                    //     fontSize: '0.9em',
+                    //     textOutline: 'none'
+                    // }
+                }
                 // centerInCategory: true, //*центрирование по категориям игнорируя пустые точки. false- резерв места для пустых точек
                 // dataLabels: {
                 //     style: {
@@ -82,7 +81,7 @@ const ChartPie = (props) => {
     };
 
     return (
-        <div className={s.section1}>
+        <div className={s.section1} >
             <div className={s.label}>{props.data.label}</div>
             <div className={s.chart}>
                 <HighchartsReact
@@ -91,7 +90,7 @@ const ChartPie = (props) => {
                     options={options}
                 />
             </div>
-        </div>
+        </div >
     );
 }
 
